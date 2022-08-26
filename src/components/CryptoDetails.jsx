@@ -46,7 +46,7 @@ const CryptoDetails = () => {
         </p>
       </Col>
 
-      <div class="chart-container">
+      <div className="chart-container">
         <Select 
           defaultValue="7d" 
           className="select-timeperiod" 

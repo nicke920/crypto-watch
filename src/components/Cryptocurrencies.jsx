@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import millify from 'millify';
 import { Table, Input } from 'antd';
+import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const Cryptocurrencies = ({simplified}) => {
@@ -34,7 +35,7 @@ const Cryptocurrencies = ({simplified}) => {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      render: (name, record, index) => <a href={record.url}>{name}</a>
+      render: (name, record, index) => <Link to={record.url}>{name}</Link>
     },
     {
       title: 'Price',
