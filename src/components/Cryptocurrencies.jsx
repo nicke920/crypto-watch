@@ -27,7 +27,7 @@ const Cryptocurrencies = ({simplified}) => {
       title: 'Icon',
       dataIndex: 'icon',
       key: 'icon',
-      render: icon => <img src={icon} />,
+      render: icon => <img src={icon} alt="" />,
       responsive: ['sm'],
     },
     {
