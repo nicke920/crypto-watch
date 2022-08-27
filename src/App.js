@@ -27,7 +27,7 @@ const App = () => {
           </div>
         </Layout>
         <div className="footer">
-          <Typography.Title level={6} style={{textAlign:'center'}}>
+          <Typography.Title level={5} style={{textAlign:'center', fontSize: '12px'}}>
             Made with love by 
             © Nicholas Evans 2022 <Link to="https://github.com/nicke920" target="_blank"><GithubOutlined /></Link> <Link to="www.linkedin.com/in/nevans3" target="_blank"><LinkedinOutlined /></Link>
           </Typography.Title>
