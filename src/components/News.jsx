@@ -49,7 +49,6 @@ const News = ({ simplified }) => {
                 <a href={ news.url } target="_blank" rel="noreferrer">
                   <div className='news-image-container'>
                     <Title className='news-title' level={5}>{ news.name }</Title>
-                    <img style={{ maxHeight: '140px', objectFit: 'cover', width: '100%' }} src={ news?.image?.thumbnail?.contentUrl || demoImage } alt="news"/>
                   </div>
                   <p>
                     { `${ news.description.substring(0, 100) } ...` }
