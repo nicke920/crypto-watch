@@ -9,6 +9,7 @@ const { Title } = Typography;
 const LineChart = ({ coinHistory, currentPrice, coinName, timePeriod }) => {
   const coinPrice = [];
   const coinTimestamp = [];
+  const dollarUSLocale = Intl.NumberFormat('en-US'); 
 
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
     coinPrice.unshift(coinHistory?.data?.history[i].price);
@@ -72,7 +73,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName, timePeriod }) => {
       <Row className="chart-header">
         <Col className="price-container">
           <Title level={5} className="price-change">Change: { coinHistory?.data?.change} %</Title>
-          <Title level={5} className="current-price">Current { coinName } Price: $ { currentPrice }</Title>
+          <Title level={5} className="current-price">Current { coinName } Price: $ { dollarUSLocale.format(Number(currentPrice).toFixed(2)) }</Title>
         </Col>
       </Row>
       <div className='chart-details'>
