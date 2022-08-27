@@ -15,7 +15,7 @@ const queryString = new URLSearchParams({
 export const cryptoApi = createApi({
   reducerPath: 'cryptoApi',
   baseQuery: fetchBaseQuery({ 
-    baseUrl: `https://api.coinranking.com/v2/}`, 
+    baseUrl: `https://api.coinranking.com/v2}`, 
     mode: "cors",
     prepareHeaders: (headers) => {
       headers.set('Access-Control-Allow-Origin', '*')
