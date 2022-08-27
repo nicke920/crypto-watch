@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Layout, Typography } from 'antd';
 
 import { Navbar, Homepage, Cryptocurrencies, News, CryptoDetails } from './components';
@@ -29,7 +29,7 @@ const App = () => {
         <div className="footer">
           <Typography.Title level={5} style={{textAlign:'center', fontSize: '12px'}}>
             Made with love by 
-            © Nicholas Evans 2022 <Link to="https://github.com/nicke920" target="_blank"><GithubOutlined /></Link> <Link to="www.linkedin.com/in/nevans3" target="_blank"><LinkedinOutlined /></Link>
+            © Nicholas Evans 2022 <a href="https://github.com/nicke920" target="_blank" rel="noreferrer"><GithubOutlined /></a><a href="https://www.linkedin.com/in/nevans3/" target="_blank" rel="noreferrer"><LinkedinOutlined /></a>
           </Typography.Title>
         </div>
       </div>
