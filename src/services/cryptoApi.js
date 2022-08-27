@@ -7,11 +7,14 @@ const createRequest = (url) => ({
   }
 })
 
-// 4:42 for explanation
+const queryString = new URLSearchParams({
+  'x-access-token': 'coinrankinge75468e050562614dbcc118caef7dc187465fe84e62c7fc9',
+  search: 'Bit',
+});
 
 export const cryptoApi = createApi({
   reducerPath: 'cryptoApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://api.coinranking.com/v2/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: `https://api.coinranking.com/v2/?${queryString}`, mode: "cors" }),
   endpoints: (builder) => ({
     getCryptos: builder.query({
       query: (count) => createRequest(`/coins?limit=${count}`)
