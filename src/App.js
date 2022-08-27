@@ -1,8 +1,9 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import { Layout, Typography, Space } from 'antd';
+import { Layout, Typography } from 'antd';
 
 import { Navbar, Homepage, Cryptocurrencies, News, CryptoDetails } from './components';
+import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
 import './App.less';
 
 const App = () => {
@@ -26,15 +27,10 @@ const App = () => {
           </div>
         </Layout>
         <div className="footer">
-          <Typography.Title level={5} style={{color: 'white', textAlign:'center'}}>
-            Cryptoverse <br/>
-            All rights reserved
+          <Typography.Title level={6} style={{textAlign:'center'}}>
+            Made with love by 
+            © Nicholas Evans 2022 <Link to="https://github.com/nicke920" target="_blank"><GithubOutlined /></Link> <Link to="www.linkedin.com/in/nevans3" target="_blank"><LinkedinOutlined /></Link>
           </Typography.Title>
-          <Space>
-            <Link to="/">Home</Link>
-            <Link to="/exchanges">Exchanges</Link>
-            <Link to="/news">News</Link>
-          </Space>
         </div>
       </div>
     </div>
